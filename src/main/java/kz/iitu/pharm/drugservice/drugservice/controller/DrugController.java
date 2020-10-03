@@ -26,7 +26,7 @@ public class DrugController {
         return drugService.getAllDrugs();
     }
 
-    @GetMapping("/findDrugByName/")
+    @GetMapping("/find/")
     public Drug findByName(@RequestParam("drugname") String name) {
         return drugRepository.findByName(name);
     }
@@ -35,9 +35,4 @@ public class DrugController {
     public Drug getDrugById(@PathVariable("id") Long id) {
         return drugRepository.findById(id).get();
     }
-//
-//    @GetMapping("/id/{drugId}")
-//    public Drug findById(@PathVariable("drugId") Long drugId) {
-//        return drugService.findById(drugId);
-//    }
 }
