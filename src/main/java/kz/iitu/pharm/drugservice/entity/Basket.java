@@ -1,4 +1,4 @@
-package kz.iitu.pharm.drugservice.drugservice.entity;
+package kz.iitu.pharm.drugservice.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;

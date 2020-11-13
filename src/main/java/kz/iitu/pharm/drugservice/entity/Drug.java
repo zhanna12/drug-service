@@ -1,4 +1,4 @@
-package kz.iitu.pharm.drugservice.drugservice.entity;
+package kz.iitu.pharm.drugservice.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -8,7 +8,6 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -27,6 +26,15 @@ public class Drug {
     @JsonIgnore
     @ManyToMany(mappedBy = "drugs", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     private Set<Basket> basket;
+
+    public Drug(String name, BigDecimal price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public Drug(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;

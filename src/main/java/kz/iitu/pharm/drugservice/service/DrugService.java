@@ -1,6 +1,6 @@
-package kz.iitu.pharm.drugservice.drugservice.service;
+package kz.iitu.pharm.drugservice.service;
 
-import kz.iitu.pharm.drugservice.drugservice.entity.Drug;
+import kz.iitu.pharm.drugservice.entity.Drug;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

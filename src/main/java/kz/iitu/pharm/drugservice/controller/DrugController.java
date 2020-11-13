@@ -1,14 +1,13 @@
-package kz.iitu.pharm.drugservice.drugservice.controller;
+package kz.iitu.pharm.drugservice.controller;
 
-import kz.iitu.pharm.drugservice.drugservice.entity.Drug;
-import kz.iitu.pharm.drugservice.drugservice.repository.DrugRepository;
-import kz.iitu.pharm.drugservice.drugservice.service.impl.DrugServiceImpl;
+import kz.iitu.pharm.drugservice.entity.Drug;
+import kz.iitu.pharm.drugservice.repository.DrugRepository;
+import kz.iitu.pharm.drugservice.service.impl.DrugServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/drugs")

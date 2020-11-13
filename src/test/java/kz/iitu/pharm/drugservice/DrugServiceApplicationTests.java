@@ -1,4 +1,4 @@
-package kz.iitu.pharm.drugservice.drugservice;
+package kz.iitu.pharm.drugservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

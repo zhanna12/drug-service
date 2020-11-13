@@ -1,5 +1,5 @@
-package kz.iitu.pharm.drugservice.drugservice.repository;
-import kz.iitu.pharm.drugservice.drugservice.entity.Drug;
+package kz.iitu.pharm.drugservice.repository;
+import kz.iitu.pharm.drugservice.entity.Drug;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package kz.iitu.pharm.drugservice.drugservice.entity;
+package kz.iitu.pharm.drugservice.entity;
 
 import lombok.Getter;
 import lombok.Setter;
