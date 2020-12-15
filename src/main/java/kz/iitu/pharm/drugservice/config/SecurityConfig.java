@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/users/**","/basket/**/**", "/drugs/**", "/register/**").permitAll()
                 .antMatchers("/users/create").hasAuthority("ADMIN")
                 .antMatchers("/users/update/**").hasAuthority("ADMIN")
-                .antMatchers("/drugs/add/**").hasAuthority("ADMIN")
+                .antMatchers("/drugs/add/**").permitAll()
                 .anyRequest().authenticated()
 
                 .and()
@@ -52,6 +52,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 // Add a filter to validate the tokens with every request
                 .addFilterAfter(new JwtTokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+    }
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth)
+            throws Exception
+    {
+        auth.inMemoryAuthentication()
+                .withUser("rest-client")
+                .password("{noop}p@ssword")
+                .roles("REST_CLIENT");
     }
 
     @Bean
